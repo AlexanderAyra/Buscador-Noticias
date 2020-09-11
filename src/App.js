@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header'
 import Formulario from './components/Formulario';
 
-function App() {
+const App = () =>  {
+
+  const [categoria, setCategoria] = useState('')
+
   return (
     <div>
       <Header titulo='Buscador de Noticias'/>
     
       <div className="container white">
-        <Formulario />
+        <Formulario
+          setCategoria={setCategoria}
+        />
       </div>
     </div>
 
