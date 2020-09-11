@@ -2,9 +2,19 @@ import React from 'react'
 import styles from './Formulario.module.css'
 import useSelect from '../hooks/useSelect'
 
-const Formulario = ({}) => {
+const Formulario = () => {
 
-    const [categoria, SelectNoticias] = useSelect();
+    const OPCIONES = [
+        {value: 'general', label: 'General'},
+        {value: 'business', label: 'Negocios'},
+        {value: 'entertainment', label: 'Entretenimiento'},
+        {value: 'health', label: 'Salud'},
+        {value: 'science', label: 'Ciencia'},
+        {value: 'sports', label: 'Deportes'},
+        {value: 'technology', label: 'Tecnología'}
+    ]
+
+    const [categoria, SelectNoticias] = useSelect('general', OPCIONES);
 
     return(
         <div className={`${styles.buscador} row`}>
