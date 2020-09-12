@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
 const Noticia = ({noticia}) => {
 
@@ -33,6 +34,10 @@ const Noticia = ({noticia}) => {
             </div>
         </div>
     )
+}
+
+Noticia.propTypes={
+    noticia: propTypes.object.isRequired
 }
 
 export default  Noticia
