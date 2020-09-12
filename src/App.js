@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header'
 import Formulario from './components/Formulario';
+import ListadoNoticias from './components/ListadoNoticias';
 
 const App = () =>  {
 
@@ -27,6 +28,10 @@ const App = () =>  {
       <div className="container white">
         <Formulario
           setCategoria={setCategoria}
+        />
+
+        <ListadoNoticias
+          noticias={noticias}
         />
       </div>
     </div>
